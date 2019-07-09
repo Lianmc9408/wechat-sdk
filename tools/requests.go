@@ -4,8 +4,8 @@ import (
 	"bytes"
 	"crypto/tls"
 	"encoding/pem"
-	"github.com/pkg/errors"
 	"golang.org/x/crypto/pkcs12"
+	"golang.org/x/errors"
 	"io/ioutil"
 	"net/http"
 )
@@ -75,4 +75,19 @@ func pkcs12ToPem(p12 []byte, password string) (*tls.Certificate, error) {
 		return nil, err
 	}
 	return &cert, nil
+}
+
+func Get(url string) ([]byte, error) {
+	response, err := http.DefaultClient.Get(url)
+	if err != nil {
+		return nil, err
+	}
+	body, err := ioutil.ReadAll(response.Body)
+	if body != nil {
+		defer response.Body.Close()
+	}
+	if err != nil {
+		return nil, err
+	}
+	return body, nil
 }

@@ -143,8 +143,7 @@ type CallBackBaseRequest struct {
 }
 
 type CallBackRequest struct {
-	ReturnCode    string `xml:"return_code"`
-	ReturnMsg     string `xml:"return_msg"`
+	CallBackBaseRequest
 	AppID         string `xml:"appid"`
 	MchID         string `xml:"mch_id"`
 	NonceStr      string `xml:"nonce_str"`
