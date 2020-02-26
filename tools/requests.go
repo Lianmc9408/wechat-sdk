@@ -4,8 +4,8 @@ import (
 	"bytes"
 	"crypto/tls"
 	"encoding/pem"
+	"errors"
 	"golang.org/x/crypto/pkcs12"
-	"golang.org/x/errors"
 	"io/ioutil"
 	"net/http"
 )
