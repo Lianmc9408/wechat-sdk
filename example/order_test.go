@@ -3,12 +3,13 @@ package example
 import (
 	"fmt"
 	"testing"
-	"wechat-sdk/pay"
+
+	"github.com/yeezyi/wechat-sdk/pay"
 )
 
 func TestRefundQuery(t *testing.T) {
 	a :=
-`<xml>
+		`<xml>
    <appid><![CDATA[wx2421b1c4370ec43b]]></appid>
    <mch_id><![CDATA[10000100]]></mch_id>
    <nonce_str><![CDATA[TeqClE3i0mvn3DrK]]></nonce_str>

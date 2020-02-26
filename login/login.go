@@ -3,7 +3,7 @@ package login
 import (
 	"encoding/json"
 	"fmt"
-	"wechat-sdk/tools"
+	"github.com/yeezyi/wechat-sdk/tools"
 )
 
 func (c *WxClient) GetAccessToken(code string) (aT *accessToken, err error) {
@@ -50,3 +50,5 @@ func (c *WxClient)GetJsApiTicket(accessToken string)(ticket *jsApiTicket, err er
 	}
 	return
 }
+
+//func (c *WxClient)GetUserInfo()

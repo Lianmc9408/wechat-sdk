@@ -3,7 +3,8 @@ package example
 import (
 	"encoding/xml"
 	"testing"
-	"wechat-sdk/pay"
+
+	"github.com/yeezyi/wechat-sdk/pay"
 )
 
 func TestCallBack(t *testing.T) {

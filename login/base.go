@@ -18,7 +18,6 @@ const (
 	checkAccessTokenURL   = "https://api.weixin.qq.com/sns/auth?access_token=%s&openid=%s"
 
 	jsApiTicketURL = "https://api.weixin.qq.com/cgi-bin/ticket/getticket?access_token=%s&type=jsapi"
-
 	mediaGetUrl = "https://api.weixin.qq.com/cgi-bin/media/get?access_token=%s&media_id=%s"
 )
 

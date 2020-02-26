@@ -3,7 +3,7 @@ package login
 import (
 	"encoding/json"
 	"fmt"
-	"wechat-sdk/tools"
+	"github.com/yeezyi/wechat-sdk/tools"
 )
 
 func GetMedia(accessToken, mediaId string)(media []byte, err error){

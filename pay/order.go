@@ -3,8 +3,8 @@ package pay
 import (
 	"encoding/xml"
 	"errors"
+	"github.com/yeezyi/wechat-sdk/tools"
 	"strconv"
-	"wechat-sdk/tools"
 )
 
 // 订单查询
@@ -184,7 +184,7 @@ func (c *WxClient) RefundQuery(req RefundQueryRequest) (map[string]string, error
 	}
 	if req.RefundID != "" {
 		dataMap["refund_id"] = req.RefundID
-	}else if req.OutRefundNo != "" {
+	} else if req.OutRefundNo != "" {
 		dataMap["out_refund_no"] = req.RefundID
 	} else if req.TransactionID != "" {
 		dataMap["transaction_id"] = req.TransactionID
